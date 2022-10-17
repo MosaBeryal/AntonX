@@ -1,0 +1,26 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap
+}
+
+.FlexItem1 {
+    margin-top: 150px;
+  color: white;
+  background-color: grey;
+  width:445px;
+  height:82px;
+  text-align: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.FlexItem2 {
+  margin-top: 20px;
+  color: white;
+  background-color: grey;
+  width: 445px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}

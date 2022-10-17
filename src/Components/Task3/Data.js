@@ -29,16 +29,8 @@ function RecivedData(inputData)
 
 setData((parray)=>{
     return[inputData,...parray ]
-})
-
-
-    
+})  
 } 
-
-
-
-
-
 return (
 <div>
 <Form onData={RecivedData}/>

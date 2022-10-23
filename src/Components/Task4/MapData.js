@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from './Card'
-import './Task3.css'
+import Cards from './Cards'
+import './Task4.css'
 function MapData(props) {
    const data=props.fetchData
   return (
@@ -9,10 +9,10 @@ function MapData(props) {
             {
                 data.map(fetchData=>
                    
-                    <div key={fetchData.id} className='item1'>
+                    <div key={fetchData.id} className="item">
 
                         {
-                            <Card key={fetchData.id} fetch={fetchData}/>
+                            <Cards key={fetchData.id} fetch={fetchData}/>
 
                         }  
 

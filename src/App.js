@@ -6,7 +6,7 @@ import FetchData from './Components/Task4/FetchData'
 const App = () => {
   return (
   <>
-      <Data/>
+      <FetchData/>
     
   </>
       

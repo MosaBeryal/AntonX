@@ -1,0 +1,44 @@
+body {
+  background-color: #1D203A;
+}
+.container {
+  display: flex;
+  width: 80vw;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* border:1px solid black; */
+  margin: auto;
+}
+.item1 {
+  width: 350px;
+  height: 230px;
+  margin: 20px;
+  background-color: #020204;
+  border-radius: 17px;
+  /* border: 1px solid black; */
+  padding-left: 21px;
+  color:white; 
+  word-wrap: break-word;
+}
+.description {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+.center {
+  text-align: center;
+  font-family: century gothic;
+  font-size: 40px;
+}
+.name {
+  font-weight: bold;
+  font-size: 20px;
+}
+.company {
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: -80px;
+  margin-top: -20px;
+}

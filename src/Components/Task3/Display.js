@@ -7,12 +7,14 @@ function Display(props) {
   return (
     
       <div className="container">
-        {recivedData.length===0?<h1 className="enterDetail">Enter your detail</h1>:recivedData.map((studentDetail) => 
+        {recivedData.length===0?<h1 className="enterDetail">Enter your detail</h1>:recivedData.map((studentDetail,index) => 
         
         
-          <div className="item1">
+          <div className="item1" key={index}>
             <Card
+            remove={props.remove}
             key={studentDetail.email}
+             id={studentDetail.id}
              name={studentDetail.name} 
             email={studentDetail.email} 
             description={studentDetail.description} />

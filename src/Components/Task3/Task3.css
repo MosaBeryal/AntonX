@@ -1,5 +1,5 @@
 body {
-  background-color: #1D203A;;
+  background-color: #1d203a;
 }
 .container {
   display: flex;
@@ -18,21 +18,18 @@ body {
   color: white;
   background-color: #020204;
   border-radius: 17px;
-  /* border: 1px solid black; */
+  border: 1px solid black; 
   padding-left: 21px;
   word-wrap: break-word;
-  box-shadow:5px 10px 18px #030303;
-  
-  
+  box-shadow: 5px 10px 18px #030303;
 }
 .item1:hover{
-  border: 2px solid rgb(0, 157, 255);
+  border: 1px solid rgb(0, 157, 255);
 }
 .description {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
-  width:300px;
-  
+  width: 300px;
 }
 
 .center {
@@ -45,7 +42,7 @@ body {
   font-size: 20px;
 }
 
-.Form{
+.Form {
   display: flex;
   justify-content: center;
   /* background-color:black ; */
@@ -54,59 +51,66 @@ body {
 
   height: auto;
   margin: auto;
-   /* margin-top: 100px; */
+  /* margin-top: 100px; */
 }
-  
 
-
-
-.input{
+.input {
   color: white;
   padding-top: 20px;
-  
 }
-#submitBtn{
-  
+#submitBtn {
   padding-left: 60px;
-  
 }
-.title{
+.title {
   padding-left: 20px;
   color: aliceblue;
   text-align: center;
   font-size: 30px;
 }
-.Deletebtn{
-  float:right;
+.Deletebtn {
+  float: right;
   margin-top: 80px;
   margin-right: 20px;
   border-radius: 6px;
-  width:60px;
+  width: 60px;
   height: 30px;
   color: Red;
-  background-color: #2F2F32;
+  background-color: #2f2f32;
+}
+.Deletebtn:hover {
+  border: 2px solid rgb(0, 157, 255);
   
 }
-.Deletebtn:hover{
-  border: 2px solid rgb(0, 157, 255);
-  position: static;
-}
-.email{
+.email {
   font-size: 12px;
   font-weight: 600;
   padding-top: -80px;
   margin-top: -20px;
 }
-.enterDetail{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.enterDetail {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: wheat;
 }
 .formSubmit{
-  margin-left: 70px;
+  margin-left: 60px;
   font-size: 20px;
   border-radius: 10px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 1px solid black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.formSubmit:hover{
+.formSubmit:hover {
   border: 1px solid rgb(0, 157, 255);
+}
+
+
+/* Dynamic external css */
+.input.invalid input{
+  border-color: rgb(200, 30, 30);
+  background-color: rgb(169, 75, 75);
+
+}
+.input.invalid textarea{
+  border-color: rgb(200, 30, 30);
+  background-color: rgb(169, 75, 75);
+
 }

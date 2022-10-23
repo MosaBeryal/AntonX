@@ -6,13 +6,26 @@ function Form(props) {
 const[name, setName]=useState("");
 const[email, setEmail]=useState("");
 const[description, setDescription]=useState("");
+const[valid,setasValid]=useState(true);
 
 function nameChangeHandler (event)
  {
+if(event.target.value.trim().length>0)
+{
+    setasValid(true)
+}
+     setName (event.target.value)
+     if(name.length===0)
+     {
+         setasValid(false)
+         
+     }
+     else{
+     setasValid(true)
+     }
+    
 
-setName (event.target.value)
 
-console.log(event)
 
 }
 
@@ -25,18 +38,50 @@ setEmail(event.target.value)
 
 function descriptionHandler(event)
 {
+    if(event.target.value.trim().length>0)
+    {
+        setasValid(true)
+    }
     setDescription(event.target.value)
 }
 
 function SubmitHandler(event){
 
     event.preventDefault();
+    if(name.length===0)
+    {
+        setasValid(false)
+        
+    }
+    else{
+    setasValid(true)
+    }
+    if(description.length===0)
+    {
+        setasValid(false)
+        
+    }
+    else{
+    setasValid(true)
+    }
+    if(email.length===0)
+    {
+        setasValid(false)
+        
+    }
+    else{
+    setasValid(true)
+    }
+   
 
     const inputData={
+        id : Math.random() * 10,
         name:name,
         email:email,
         description:description
     }
+    
+    
     
     
     setName("");
@@ -49,13 +94,14 @@ function SubmitHandler(event){
 
     props.onData(inputData)
 }
+
 return (
     <div className='Form'>
         
 
     <form action="" onSubmit={SubmitHandler}>
         
-        <div className=' input'>
+        <div className={`input ${!valid?`invalid`:""}`}>
             <h1 className='title'>
         Welcome,{name}
             </h1>
@@ -66,24 +112,28 @@ return (
         id='name'
         style={
             {
+                
                 width:300,
                 height:30,
-                borderRadius:10
+                borderRadius:10,
+
             }
          } 
         value={name}
         onChange={nameChangeHandler}
-        required
+        
         />
         </div>
-        <div className='input'>
+        <div className={`input ${!valid?`invalid`:""}`}>
        
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email" >Email</label>
         <input 
         type="email" 
         id='email'
         style={
             {
+            
+
                 width:300,
                 height:30,
                 borderRadius:10
@@ -91,16 +141,17 @@ return (
          } 
         value={email}
         onChange={emailChangeHandler}
-        required
+        
         />
         </div>
 
-<div className='input'>
-         <label htmlFor='description' >Description</label>
+<div className={`input ${!valid?`invalid`:""}`}>
+         <label htmlFor='description' className={`input ${!valid?`invalid`:""}`} >Description</label>
          <textarea
          minLength={1}
          style={
             {
+                
                 width:300,
                 height:60,
                 borderRadius:10
@@ -109,13 +160,13 @@ return (
          id="description"  
          value={description}
          onChange={descriptionHandler}
-         required
+        
         />
                   
 </div>
 <div className='input' id='submitBtn'>
 
-        <button type='submit' className='formSubmit'>Submit</button>
+        <button type='submit' className='formSubmit'>Click Me</button>
 </div>
     </form>
     </div>

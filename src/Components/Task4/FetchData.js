@@ -2,12 +2,12 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import MapData from "./MapData.js";
+import Button1 from "./Button1.js";
 
 function FetchData() {
   const [data, setData] = useState([]);
   async function onLoad() {
     const {data } =await axios.get("https://jsonplaceholder.typicode.com/photos?&_limit=30")
-    console.log(data)
     
     setData(data)
     
@@ -17,7 +17,7 @@ function FetchData() {
     if (event.key === "Enter") {                                                                                                        
       event.preventDefault();
 
-      document.getElementById("btn").click();
+      onLoad();
     }
   };
 
@@ -25,12 +25,11 @@ function FetchData() {
 
   return (
     <div>
-      {/* <Button onClick={onLoad}id="btn">Fetch Data</Button> */}
-      <button onClick={onLoad} id="btn" className="center">
-        Fetch Data
-      </button>
+    
+      <Button1 LoadData={onLoad} ></Button1>
 
       <MapData fetchData={data} />
+      
     </div>
   );
 }

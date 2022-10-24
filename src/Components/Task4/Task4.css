@@ -20,27 +20,8 @@ body {
 .center {
   margin-left: 40vw;
   text-align: center;
-  font-family: century gothic;
+  /* font-family: century gothic; */
   font-size: 40px;
+  margin-top: 30px;
+  /* border-radius: 5px; */
 }
-  /* border: 1px solid black;
-  padding-left: 21px;
-  color:white; 
-  word-wrap: break-word; 
-}
-/* .description {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 14px;
-}
-
-
-.name {
-  font-weight: bold;
-  font-size: 20px;
-}
-.company {
-  font-size: 12px;
-  font-weight: 600;
-  padding-top: -80px;
-  margin-top: -20px;
-} */

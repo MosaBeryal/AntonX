@@ -2,7 +2,7 @@ import React from 'react'
 import Cards from './Cards'
 import './Task4.css'
 function MapData(props) {
-   const fetchData=props.fetchData
+   const fetchData=props.fetchedData
   return (
     <div className='container'>
     
@@ -12,7 +12,7 @@ function MapData(props) {
                     {
                     return <div key={fetchData.id} className="item">
 
-                      {<Cards key={fetchData.id} fetch={fetchData} />}
+                      {<Cards key={fetchData.id} fetchedData={fetchData} />}
 
                     </div>
                   }                                                    

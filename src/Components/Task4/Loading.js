@@ -1,6 +1,15 @@
-import React from 'react'
-import { Loader } from 'semantic-ui-react'
+import Spinner from 'react-bootstrap/Spinner';
+import styles from'./loading.module.css'
 
-const Loading= () => <Loader active inline='centered' />
+function Loading() {
+  return (
+    <>
+    <div className={styles.center}>
+    <Spinner animation="grow" variant="danger" size="lg"/>
+
+    </div>
+    </>
+  );
+}
 
 export default Loading

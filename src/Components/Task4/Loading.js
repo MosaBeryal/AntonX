@@ -5,7 +5,7 @@ function Loading() {
   return (
     <>
     <div className={styles.center}>
-    <Spinner animation="grow" variant="danger" size="lg"/>
+    <Spinner animation="grow" variant="light" size="lg"/>
 
     </div>
     </>

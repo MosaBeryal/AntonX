@@ -9,6 +9,7 @@ import "./Task4.css";
 function FetchData() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+
   async function fetchUserData() {
     setLoading(true);
     const {data} =await axios.get("https://jsonplaceholder.typicode.com/photos?&_limit=30")
@@ -34,19 +35,22 @@ function FetchData() {
 
       {loading && <Loading />}
 
-      <FetchDataButton fetchButton={fetchUserData}></FetchDataButton>
+      <div className="fetchButton">
+       <FetchDataButton fetchButton={fetchUserData} className="Button"></FetchDataButton>
+      </div>
 
       <div className="container">
 
         {data.map((fetchData) => (
           
-        <div className="item" key={fetchData.id}>
+        <div className="Card" key={fetchData.id}>
 
         <Cards fetchedData={fetchData} />
           
           </div>
 
         ))}
+
 
       </div>
     </div>

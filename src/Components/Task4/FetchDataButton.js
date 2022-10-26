@@ -4,9 +4,14 @@ import './Task4.css'
 function FetchDataButton(props) {
   return (
     <>
-      <div className="mb-2">
-        <Button variant="info" size="lg" className='center' onClick={props.fetchButton}>
-          FetchData
+      <div className="mb">
+        <Button variant="info" style={{
+          backgroundColor:"#1C2C4F"
+         ,color:"white" ,
+         width:"300px", 
+         fontSize:"30px",}} 
+         onClick={props.fetchButton}>
+          Fetch data
         </Button>{' '}
       </div>
     </>

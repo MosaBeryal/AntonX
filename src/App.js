@@ -1,11 +1,11 @@
 import React from 'react'
-import FetchData from './Components/Task4/FetchData'
+import Home from "./Components/Task5/Home"
 
 
 const App = () => {
   return (
   <>
-      <FetchData/>
+      <Home/>
     
   </>
       

@@ -5,16 +5,21 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import logo from "./images/star.svg";
 
-function HomeNav() {
+function Navb() {
   return (
     <div>
       <Navbar variant="light" style={{ display: "flex" }}>
         <Container style={{ marginTop: "20px" }}>
-          <Navbar.Brand
-            href="#home"
+          <Nav.Link
+          as={Link}
+          to='/'
+
             style={{ fontSize: "30px", fontWeigt: "bold" }}
-          >
+            >
+             
+            
             <img
+            
               alt=""
               src={logo}
               width="30"
@@ -23,7 +28,7 @@ function HomeNav() {
               style={{ marginLeft: "70px" }}
             />{" "}
             Logo
-          </Navbar.Brand>
+          </Nav.Link>
         </Container>
         <Container style={{ marginRight: "280px", marginTop: "20px" }}>
           <Nav>
@@ -46,4 +51,4 @@ function HomeNav() {
   );
 }
 
-export default HomeNav;
+export default Navb;

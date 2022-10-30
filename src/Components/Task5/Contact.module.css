@@ -3,10 +3,11 @@
     /* border: 1px solid red; */
     
     margin-left: 80px;
+    margin-top: 50px;
 }
 .item1
 {
-    width: 500px;
+    width: 600px;
     /* border: 1px solid red; */
 }
 .item2{
@@ -25,7 +26,7 @@ padding-left: 40px;
 
 }
 .contactDetail >h5{
-    padding-top: 30px;
+    padding: 20px;
 }
 
 .input{

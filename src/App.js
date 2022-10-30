@@ -1,11 +1,11 @@
 import React from 'react'
-import Home from "./Components/Task5/Home"
+import Navigator from "./Components/Task5/Navigator"
 
 
 const App = () => {
   return (
   <>
-      <Home/>
+      <Navigator/>
     
   </>
       

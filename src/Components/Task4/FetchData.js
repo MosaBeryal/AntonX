@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import FetchDataButton from "./FetchDataButton.js";
-import Loading from "./Loading";
+import Loading from "../Task5/Loading";
 import Cards from "./Cards.js";
 import "./Task4.css";
 
@@ -13,12 +13,13 @@ function FetchData() {
   async function fetchUserData() {
     setLoading(true);
     const {data} =await axios.get("https://jsonplaceholder.typicode.com/photos?&_limit=30")
-    console.log(data)
+    // console.log(data)
     setData(data)
+    setLoading(false)
 
 
     // .then((res) => setData(res.data));
-    setLoading(false);
+    // setLoading(false);
   }
 
   const handleKeyDown = (event) => {

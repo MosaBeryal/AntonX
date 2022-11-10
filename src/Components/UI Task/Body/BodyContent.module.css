@@ -1,0 +1,151 @@
+
+.main_div {
+  display: flex;
+  width: 100%;
+  /* border: 1px solid white; */
+  flex-direction: column;
+  justify-content: center;
+  align-items:center ;
+  /* padding: 70px; */
+  align-items: center;
+  margin: auto;
+  z-index: 2;
+}
+.heading {
+  /* margin-top: 50px; */
+  color:rgb(252, 252, 252);
+  font-size: 2.75rem;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+.heading_start {
+  background: #7f25c4;
+  background: linear-gradient(to right, #7f25c4 0%, #f222c8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+ 
+}
+span:before{
+  content: 'Start';
+  animation: animate 5s alternate;
+}
+@keyframes animate
+{
+  0%{
+    content: "Start";
+  }
+  25%{
+    content: "Grow";
+  }
+  50%{
+    content: "Run";
+  }
+  75%{
+    content: "Scale";
+  }
+  100%{
+    content: "Build";
+  }
+}
+.paragraph_div {
+  color:rgb(252, 252, 252);
+  font-size: 10px;
+  text-align: center;
+  width: 50%;
+  opacity: 0.5;
+}
+.contentbtn_div {
+  display: flex;
+  width: 30%;
+}
+.btn {
+  font-size: 12px;
+  border: 0;
+  background-color: white;
+  color: black;
+}
+.btn:hover {
+  background: linear-gradient(to right, #7f25c4 0%, #f222c8 100%);
+  color:rgb(252, 252, 252);
+}
+
+.link {
+  font-size: 12px;
+  padding-top: 5px;
+  padding-left: 5px;
+  opacity: 0.5;
+}
+.link a {
+  text-decoration: none;
+  color:rgb(252, 252, 252);
+}
+.information{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 30%;
+    height: 40px;
+    margin-top: 10px;
+    opacity: 0.5;
+    
+}
+
+.information_companies {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 10px;
+  color:rgb(252, 252, 252);
+}
+  
+
+.reveiws{
+    display: flex;
+  flex-direction: column;
+}
+.reveiws p{
+  color:rgb(252, 252, 252);
+  font-size: 10px;
+  text-align: center;
+}
+
+.stars{
+  color:rgb(252, 252, 252);
+  opacity: 0.5;
+  font-size: 12px;
+  text-align: center;
+  
+}
+
+.countries{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color:rgb(252, 252, 252);
+  
+  font-size: 10px;
+
+}
+
+
+.bodyVideo{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+  
+
+}
+video {
+  width: 100%;
+  height: auto;
+}
+.v1{
+  color: white;
+  width: 10%;
+  transform: rotate(90deg);
+}

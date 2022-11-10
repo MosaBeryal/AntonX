@@ -9,6 +9,8 @@ import ProductDetail from './ProductDetail'
 import FetchState from './Context/FetchState'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Cart from './Cart'
+import {Provider} from "react-redux"
+import store from './store/store'
 function Navigator(){
    const [cart,setCart]=useState([]);
 
@@ -21,7 +23,11 @@ function Navigator(){
   
   return (
     <div>
+      {/* the binding we install react-Redux gives us binding to use provider through which we inject the store> */}
+      <Provider store={store}>
+
       <FetchState>
+
    
       <Router>
       <Navb/>
@@ -37,6 +43,7 @@ function Navigator(){
       </Router>    
       
     </FetchState>
+      </Provider>
   
        </div>
   )

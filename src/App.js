@@ -1,12 +1,10 @@
 import React from 'react'
-import Navigator from "./Components/Task5/Navigator"
-
+import Navigator from './Components/Task6/Navigator'
 
 const App = () => {
   return (
   <>
-      <Navigator/>
-    
+    <Navigator/>
   </>
       
     

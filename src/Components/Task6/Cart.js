@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Cart.module.css";
 import { Button,Modal } from "react-bootstrap";
+import {useSelector} from 'react-redux'
 
 
 function Cart(props) {
   const [show, showAlert] = useState(false);
-  
-  const cartData = props.data;
+  const product = useSelector(state=>state.cart);
   const clean=props.cleanCartData
 
   return (
     <div>
-      {cartData.map((data) => (
+      {product.map((data) => (
         <div className={styles.container}>
           <div className={styles.item1}>
             <img src={data.image} alt="productimage" width="171px" height="139px" ></img>
@@ -28,7 +28,7 @@ function Cart(props) {
       <div>
         <h1 className={styles.amount}>
           Total amount:
-          {cartData
+          {product
             .map((item) => item.price)
             .reduce((total, value) => total + value, 0)}
             $
@@ -54,8 +54,8 @@ function Cart(props) {
           <h1>
 
         
-          {cartData
-            .map((item) => item.price)
+          {product
+          .map((item) => item.price)
             .reduce((total, value) => total + value, 0)}
             $
           </h1>

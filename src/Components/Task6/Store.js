@@ -1,26 +1,60 @@
-import React,{useContext} from 'react'
+import React,{useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import styles from './Store.module.css'
-import fetchContext from './Context/fetchContext';
 import {Link} from 'react-router-dom'
-import {useState} from 'react'
+import {useDispatch} from 'react-redux'
+import {add} from './store/cartSlice'
+import {fetchProducts} from './store/fetchDataSlice'
+import {useSelector} from 'react-redux'
 
 
 
-
-function Store(props) {
-  // const {fetchData , setData}= useState(fetchedData);
-  const fetchedData=useContext(fetchContext)
+function Store() {
   
-  console.log(fetchedData)
+  const dispatch = useDispatch();
+  
+  useEffect(()=>{
+    
+    dispatch(fetchProducts())
+  }
+  ,[]
+  )
+  
+  const product = useSelector((state)=>state.productData)
+  console.log(product)
+  
+
+  
+  
+  function handleAdd(Data)
+  {
+    //product which is clicked , we want to store that product in Redux Store
+    dispatch(add(Data))
+
+  }
   return (
     <div>
+        <div className={styles.search}>
+        <h5>
+          Search by categories:
+        </h5>
+        <button>
+          Shoes
+        </button>
+        <button>
+          Jacket 
+        </button>
+        <button>
+          jewelery
+
+        </button>
+        </div>
       <div className={styles.container}>
 
     {
       
-      fetchedData.map((Data)=>
+     product.data.map((Data)=>
       
 
         <Card className={styles.item1} 
@@ -53,7 +87,7 @@ function Store(props) {
           <Button 
           style={{backgroundColor:"#6666ff" , fontWeight:"700"}} 
           size="lg"
-          onClick={()=>{props.addToCart(Data)}}  >
+          onClick={()=>{handleAdd(Data)}}  >
             Add to Cart
           </Button>
           </div>
